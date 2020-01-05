@@ -62,7 +62,7 @@ void get_mul(stack_t **stack, unsigned int line_number);
 void get_mod(stack_t **stack, unsigned int line_number);
 
 
-int _isdigit(char str);
+int _isdigit(char *str);
 
 
 #endif /* MONTY_H */
