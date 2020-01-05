@@ -9,8 +9,6 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
-#define DELIMINATOR "\n "
-#define BUFFERSIZE 1024
 
 
 /**
@@ -28,10 +26,6 @@ typedef struct stack_s
 	struct stack_s *prev;
 	struct stack_s *next;
 } stack_t;
-
-
-extern char *global_char;
-char *global_char;
 
 
 /**
