@@ -29,7 +29,6 @@ int main(int argc, char *argv[])
 		if (get_line == -1)
 			break;
 		line_count++;
-
 		operator_array[0] = strtok(str, "\n ");
 		if (operator_array[0] == NULL)
 			get_nop(&head, line_count);
