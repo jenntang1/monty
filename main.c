@@ -22,9 +22,7 @@ int main(int argc, char *argv[])
 	if (argc != 2)
 		dprintf(1, "USAGE: monty file\n"), exit(EXIT_FAILURE);
 	if (file == NULL)
-	{
 		dprintf(1, "Error: Can't open file %s\n", argv[1]), exit(EXIT_FAILURE);
-	}
 	while (1)
 	{
 		get_line = getline(&str, &bufsize, file);
@@ -32,9 +30,11 @@ int main(int argc, char *argv[])
 			break;
 		line_count++;
 		operator_array[0] = strtok(str, "\n ");
-		if (strcmp("push", operator_array[0]) == 0)
+		if (operator_array[0] == NULL)
+			get_nop(&head, line_count);
+		else if (strcmp("push", operator_array[0]) == 0)
 		{
-			temp = strtok(NULL, DELIMINATOR);
+			temp = strtok(NULL, "\n ");
 			get_push(&head, line_count, temp);
 		}
 		else if (operator_array[0] != NULL && operator_array[0][0] != '#')
