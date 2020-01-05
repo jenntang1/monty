@@ -12,9 +12,11 @@
  */
 void get_push(stack_t **stack, unsigned int line_number, char *temp)
 {
-	(void)line_number;
+
 	stack_t *new_top;
 	int n = 0;
+
+	(void)line_number;
 
 	n = atoi(temp);
 
