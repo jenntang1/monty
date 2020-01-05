@@ -14,11 +14,25 @@ void get_push(stack_t **stack, unsigned int line_number, char *temp)
 {
 
 	stack_t *new_top;
-	int n = 0;
+	long int n;
 
 	(void)line_number;
 
-	n = atoi(temp);
+	if (temp != NULL)
+	{
+		if (atoi(temp) == 0)
+		{
+			fprintf(stderr, "L%d: usage: push integer\n", line_number);
+			exit(EXIT_FAILURE);
+		}
+		n = atoi(temp);
+	}
+
+	if (_isdigit(n) == 0)
+	{
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		exit(EXIT_FAILURE);
+	}
 
 	new_top = malloc(sizeof(stack_t));
 	if (new_top == NULL)
@@ -38,4 +52,22 @@ void get_push(stack_t **stack, unsigned int line_number, char *temp)
 		*stack = new_top;
 	}
 	*stack = new_top;
+}
+
+
+/**
+ *  _isdigit - Finds if char is a digit or not
+ *
+ *  @str: Character passed in
+ *
+ *  Return: 1 for digit, 0 if not
+ */
+
+int _isdigit(char str)
+{
+	if (str >= '0' && str <= '9')
+	{
+		return (1); /* Success */
+	}
+	return (0);
 }
