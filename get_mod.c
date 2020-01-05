@@ -26,9 +26,10 @@ void get_mod(stack_t **stack, unsigned int line_number)
 	else
 	{
 		first = *stack;
-		second = (*stack)->next;
-		second->n %= (second->n / first->n);
+		second = first->next;
+		second->n %= first->n;
 		*stack = second;
+		(*stack)->prev = NULL;
 		free(first);
 	}
 }

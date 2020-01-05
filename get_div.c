@@ -29,6 +29,7 @@ void get_div(stack_t **stack, unsigned int line_number)
 		second = first->next;
 		second->n /= first->n;
 		*stack = second;
+		(*stack)->prev = NULL;
 		free(first);
 	}
 }

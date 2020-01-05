@@ -24,6 +24,7 @@ void get_sub(stack_t **stack, unsigned int line_number)
 		second = first->next;
 		second->n -= first->n;
 		*stack = second;
+		(*stack)->prev = NULL;
 		free(first);
 	}
 }
