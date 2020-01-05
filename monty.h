@@ -43,8 +43,8 @@ typedef struct instruction_s
 } instruction_t;
 
 
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
-char **parse_line(char *line);
+
+
 void (*operator_function)(stack_t **, unsigned int);
 void (*get_operation(char *op_func))(stack_t **stack, unsigned int line_num);
 
@@ -60,6 +60,9 @@ void get_sub(stack_t **stack, unsigned int line_number);
 void get_div(stack_t **stack, unsigned int line_number);
 void get_mul(stack_t **stack, unsigned int line_number);
 void get_mod(stack_t **stack, unsigned int line_number);
+
+
+int _isdigit(char str);
 
 
 #endif /* MONTY_H */
