@@ -23,7 +23,7 @@ void get_add(stack_t **stack, unsigned int line_number)
 		first = *stack;
 		second = first->next;
 		second->n += first->n;
-		*stack = second;
 		free(first);
+		*stack = second;
 	}
 }
