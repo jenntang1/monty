@@ -4,6 +4,7 @@
  * get_push - function that pushes an element onto top of the stack
  * @stack: pointer to the top of the stack
  * @line_number: where the line number appears
+ * @temp: Pointer to instruction
  * Description: 0. push, pall
  * Return: see below
  * 1. upon success, nothing
@@ -12,7 +13,6 @@
 void get_push(stack_t **stack, unsigned int line_number, char *temp)
 {
 	(void)line_number;
-	
 	stack_t *new_top;
 	int n = 0;
 
