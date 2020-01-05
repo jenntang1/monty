@@ -61,10 +61,6 @@ int _isdigit(char *temp)
 {
 	int i = 0;
 
-	if (*temp == '-')
-	{
-		temp++;
-	}
 	while (temp[i] != '\0')
 	{
 		if (isdigit(temp[i]) == 0)
