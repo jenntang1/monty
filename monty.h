@@ -46,7 +46,7 @@ typedef struct instruction_s
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 char **parse_line(char *line);
 void (*operator_function)(stack_t **, unsigned int);
-void (*get_operation(char *op_func))(stack_t **stack, unsigned int line_number);
+void (*get_operation(char *op_func))(stack_t **stack, unsigned int line_num);
 
 
 void get_push(stack_t **stack, unsigned int line_number, char *temp);
