@@ -20,11 +20,13 @@ void get_push(stack_t **stack, unsigned int line_number, char *temp)
 	if (temp == NULL)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		fclose(file);
 		exit(EXIT_FAILURE);
 
 		if (_isdigit(temp) == 0)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
+			fclose(file);
 			exit(EXIT_FAILURE);
 		}
 	}
@@ -32,6 +34,7 @@ void get_push(stack_t **stack, unsigned int line_number, char *temp)
 	if (new_top == NULL)
 	{
 		fprintf(stderr, "Error: malloc failed\n");
+		fclose(file);
 		exit(EXIT_FAILURE);
 	}
 

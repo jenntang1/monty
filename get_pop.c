@@ -13,15 +13,17 @@ void get_pop(stack_t **stack, unsigned int line_number)
 {
 	stack_t *first;
 
-	if (*stack != NULL)
-	{
-		first = *stack;
-		*stack = (*stack)->next;
-		free(first);
-	}
-	else
+	if ((*stack == NULL) || (stack == NULL))
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
+		fclose(file);
 		exit(EXIT_FAILURE);
 	}
+	first = *stack;
+	*stack = (*stack)->next;
+	if (first->next)
+	{
+		first->next->prev = NULL;
+	}
+	free(first);
 }

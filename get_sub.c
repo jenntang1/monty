@@ -16,6 +16,7 @@ void get_sub(stack_t **stack, unsigned int line_number)
 	if ((*stack == NULL) || ((*stack)->next == NULL))
 	{
 		fprintf(stderr, "L%d: can't add, stack too short\n", line_number);
+		fclose(file);
 		exit(EXIT_FAILURE);
 	}
 	else
@@ -24,6 +25,7 @@ void get_sub(stack_t **stack, unsigned int line_number)
 		second = first->next;
 		second->n -= first->n;
 		*stack = second;
+		(*stack)->prev = NULL;
 		free(first);
 	}
 }

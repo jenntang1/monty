@@ -24,6 +24,9 @@ void (*get_operation(char *op_func))(stack_t **stack, unsigned int line_number)
 		{"mul", get_mul},
 		{"mod", get_mod},
 		{"nop", get_nop},
+		{"rotl", get_rotl},
+		{"rotr", get_rotr},
+		{"pchar", get_pchar},
 		{NULL, NULL}
 	};
 

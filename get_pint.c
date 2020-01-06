@@ -14,10 +14,8 @@ void get_pint(stack_t **stack, unsigned int line_number)
 	if (*stack == NULL)
 	{
 		fprintf(stderr, "L%d: can't pint, stack empty\n", line_number);
+		fclose(file);
 		exit(EXIT_FAILURE);
 	}
-	else if (*stack)
-	{
-		printf("%d\n", (*stack)->n);
-	}
+	printf("%d\n", (*stack)->n);
 }

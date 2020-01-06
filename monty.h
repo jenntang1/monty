@@ -43,25 +43,8 @@ typedef struct instruction_s
 } instruction_t;
 
 
-/**
- *  struct used_memory - A list of memory used
- *
- *  @data: Data char
- *
- *  @used_memory: Pointer to next
- *
- *  Return: Struct
- */
-
-typedef struct used_memory
-{
-	char *data;
-	struct used_memory *next;
-} used_mem;
-
-extern used_mem memory;
-used_mem memory;
-
+extern FILE *file;
+FILE *file;
 
 void (*operator_function)(stack_t **, unsigned int);
 void (*get_operation(char *op_func))(stack_t **stack, unsigned int line_num);

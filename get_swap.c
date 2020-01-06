@@ -11,19 +11,24 @@
  */
 void get_swap(stack_t **stack, unsigned int line_number)
 {
-	stack_t *first = *stack;
-	stack_t *second = first->next;
+	stack_t *first, *second;
 
-	if ((*stack)->next == NULL)
+	if ((*stack == NULL) || ((*stack)->next == NULL))
 	{
 		fprintf(stderr, "L%d: can't swap, stack too short\n", line_number);
+		fclose(file);
 		exit(EXIT_FAILURE);
 	}
 	else if (*stack)
 	{
+		first = *stack;
+		second = first->next;
 		*stack = second;
 		first->next = second->next;
-		second->next->prev = first;
+		if (second->next != NULL)
+		{
+			second->next->prev = first;
+		}
 		second->prev = NULL;
 		second->next = first;
 		first->prev = second;

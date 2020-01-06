@@ -12,17 +12,17 @@
 
 int main(int argc, char *argv[])
 {
-	FILE *file = fopen(argv[1], "r");
 	stack_t *head = NULL;
 	char  *str = NULL, *operator_array[2], *temp;
 	size_t bufsize = 1024, line_count = 0;
 	ssize_t get_line;
 	void (*operator_function)(stack_t **stack, unsigned int line_number);
 
+	file = fopen(argv[1], "r");
 	if (argc != 2)
-		dprintf(1, "USAGE: monty file\n"), exit(EXIT_FAILURE);
+		fprintf(stderr, "USAGE: monty file\n"), exit(EXIT_FAILURE);
 	if (file == NULL)
-		dprintf(1, "Error: Can't open file %s\n", argv[1]), exit(EXIT_FAILURE);
+		fprintf(stderr, "Error: Can't open file %s\n", argv[1]), exit(EXIT_FAILURE);
 	while (1)
 	{
 		get_line = getline(&str, &bufsize, file);
