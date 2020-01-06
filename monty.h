@@ -42,8 +42,8 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
-
+extern FILE *file;
+FILE *file;
 
 void (*operator_function)(stack_t **, unsigned int);
 void (*get_operation(char *op_func))(stack_t **stack, unsigned int line_num);
