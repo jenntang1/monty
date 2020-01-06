@@ -43,6 +43,24 @@ typedef struct instruction_s
 } instruction_t;
 
 
+/**
+ *  struct used_memory - A list of memory used
+ *
+ *  @data: Data char
+ *
+ *  @used_memory: Pointer to next
+ *
+ *  Return: Struct
+ */
+
+typedef struct used_memory
+{
+	char *data;
+	struct used_memory *next;
+} used_mem;
+
+extern used_mem memory;
+used_mem memory;
 
 
 void (*operator_function)(stack_t **, unsigned int);
@@ -60,6 +78,9 @@ void get_sub(stack_t **stack, unsigned int line_number);
 void get_div(stack_t **stack, unsigned int line_number);
 void get_mul(stack_t **stack, unsigned int line_number);
 void get_mod(stack_t **stack, unsigned int line_number);
+void get_rotl(stack_t **stack, unsigned int line_number);
+void get_pchar(stack_t **stack, unsigned int line_number);
+void get_rotr(stack_t **stack, unsigned int line_number);
 
 
 int _isdigit(char *str);
