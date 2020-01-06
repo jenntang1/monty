@@ -5,13 +5,14 @@ The source codes contained in this repository will implement an interpreter to r
 Similar to Python, Monty 0.98 is a scripting language compiled into a Monty ByteCode file that has a **.m** extension.  In the file, each line contains one instruction only called **opcode**.  There could be whitespaces before and/or after the **opcode** and its argument.  If there's text after the **opcode** or its argument, it will be ignored.  The file is read line by line and stopped when it's fully executed, finds an error or an error occurs.  After successful execution, output will be printed to standard out.  Otherwise, error will be printed to standard error.  
 
 The following are the error handling in this interpreter:  
-| Error                                | Message                                              | Exit Status   |
-| :----------------------------------- | :--------------------------------------------------- | :------------ |
-| 1. No file name                      | USAGE: monty file                                    | EXIT\_FAILURE |
-| 2. More than one argument            | USAGE: monty file                                    | EXIT\_FAILURE |
-| 3. Cannot open file                  | Error: Can't open file ***filename***                | EXIT\_FAILURE |
-| 3. File contains invalid instruction | L***line number***: unknown instruction ***opcode*** | EXIT\_FAILURE |
-| 4. Malloc failed                     | Error: malloc failed                                 | EXIT\_FAILURE |
+
+| Error                                | Message                                      | Exit Status   |
+| ------------------------------------ | -------------------------------------------- | ------------- |
+| 1. No file name                      | USAGE: monty file                            | EXIT\_FAILURE |
+| 2. More than one argument            | USAGE: monty file                            | EXIT\_FAILURE |
+| 3. Cannot open file                  | Error: Can't open file *filename*            | EXIT\_FAILURE |
+| 3. File contains invalid instruction | L*line number*: unknown instruction *opcode* | EXIT\_FAILURE |
+| 4. Malloc failed                     | Error: malloc failed                         | EXIT\_FAILURE |
 
 # General #
 0. What do LIFO and FIFO mean?  
