@@ -50,7 +50,6 @@ int main(int argc, char *argv[])
 		operator_function(&head, line_count);
 		}
 	}
-	fclose(file), free(str);
-	get_free(head);
+	fclose(file), free(str), get_free(head);
 	return (0);
 }
