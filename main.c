@@ -51,5 +51,6 @@ int main(int argc, char *argv[])
 		}
 	}
 	fclose(file), free(str);
+	get_free(head);
 	return (0);
 }

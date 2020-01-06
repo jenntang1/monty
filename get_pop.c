@@ -17,6 +17,7 @@ void get_pop(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
 		fclose(file);
+		get_free(*stack);
 		exit(EXIT_FAILURE);
 	}
 	first = *stack;

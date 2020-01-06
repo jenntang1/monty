@@ -15,6 +15,7 @@ void get_pchar(stack_t **stack, unsigned int line_number)
 	{
 		fprintf(stderr, "L%d: can't pchar, stack empty\n", line_number);
 		fclose(file);
+		get_free(*stack);
 		exit(EXIT_FAILURE);
 	}
 	if (!(isascii((*stack)->n)))
