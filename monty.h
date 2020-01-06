@@ -42,6 +42,7 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+
 extern FILE *file;
 FILE *file;
 
@@ -60,6 +61,9 @@ void get_sub(stack_t **stack, unsigned int line_number);
 void get_div(stack_t **stack, unsigned int line_number);
 void get_mul(stack_t **stack, unsigned int line_number);
 void get_mod(stack_t **stack, unsigned int line_number);
+void get_rotl(stack_t **stack, unsigned int line_number);
+void get_pchar(stack_t **stack, unsigned int line_number);
+void get_rotr(stack_t **stack, unsigned int line_number);
 
 
 int _isdigit(char *str);

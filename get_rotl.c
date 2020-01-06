@@ -13,6 +13,8 @@ void get_rotl(stack_t **stack, unsigned int line_number)
 {
 	stack_t *first, *last;
 
+	(void)line_number;
+
 	if ((*stack == NULL) || ((*stack)->next == NULL))
 	{
 		;
@@ -28,6 +30,6 @@ void get_rotl(stack_t **stack, unsigned int line_number)
 		last->next = first;
 		first->prev = last;
 		first->next = NULL;
-		(*stack)->prev = NULL:
+		(*stack)->prev = NULL;
 	}
 }
