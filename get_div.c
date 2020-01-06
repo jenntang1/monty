@@ -22,7 +22,7 @@ void get_div(stack_t **stack, unsigned int line_number)
 	else if ((*stack)->n == 0)
 	{
 		fprintf(stderr, "L%d: division by zero\n", line_number);
-		fcloe(file);
+		fclose(file);
 		exit(EXIT_FAILURE);
 	}
 	else
