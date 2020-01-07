@@ -23,7 +23,7 @@ void get_push(stack_t **stack, unsigned int line_number, char *temp)
 		fclose(file);
 		get_free(*stack);
 		exit(EXIT_FAILURE);
-		if (_isdigit(temp) == 0)
+		if (_isdigit(temp) == 1)
 		{
 			fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			fclose(file);
@@ -65,9 +65,14 @@ int _isdigit(char *temp)
 {
 	int i = 0;
 
+	if (temp[i] == '-')
+	{
+		i++;
+	}
+
 	while (temp[i] != '\0')
 	{
-		if (isdigit(temp[i]) == 0)
+		if (temp[i] >= '0' && temp[i] <= '9')
 		{
 			return (0);
 		}
