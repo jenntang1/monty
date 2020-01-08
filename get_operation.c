@@ -9,7 +9,7 @@
  */
 
 
-void (*get_operation(char *op_func))(stack_t **stack, unsigned int line_number)
+void (*get_operation(char *op_func, unsigned int line,stack_t **stack))(stack_t**, unsigned int)
 {
 	int count;
 
@@ -37,5 +37,8 @@ void (*get_operation(char *op_func))(stack_t **stack, unsigned int line_number)
 			return (operation[count].f);
 		}
 	}
+	fprintf(stderr, "L%u: unknown instruction %s", line, op_func);
+	fclose(file);
+	get_free(*stack);
 	exit(EXIT_FAILURE);
 }
