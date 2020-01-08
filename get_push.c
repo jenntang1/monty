@@ -17,7 +17,7 @@ void get_push(stack_t **stack, unsigned int line_number, char *temp)
 
 	(void)line_number;
 
-	if (temp == NULL)
+	if (!(_isdigit(args.arg)))
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		fclose(file);
@@ -61,22 +61,23 @@ void get_push(stack_t **stack, unsigned int line_number, char *temp)
  *  Return: 1 for digit, 0 if not
  */
 
-int _isdigit(char *temp)
+int _isdigit(char *str)
 {
-	int i = 0;
+  
 
-	if (temp[i] == '-')
+	if (str == NULL || *str == '\0')
 	{
-		i++;
+		return (0);
 	}
-
-	while (temp[i] != '\0')
+	if (*str == '-')
 	{
-		if (temp[i] >= '0' && temp[i] <= '9')
-		{
+		str++;
+	}
+	while (*str)
+	{
+		if (!isdigit(*str))
 			return (0);
-		}
-		i++;
+		str++;
 	}
 	return (1);
 }
