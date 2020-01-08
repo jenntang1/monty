@@ -1,15 +1,17 @@
 #include "monty.h"
 
 /**
- * get_operation - Operators
+ * go - Operators
  *
- * @op_func: Char pointer
+ * @op_f: Char pointer
+ * @l: line
+ * @stak: stack
  *
  * Return: Void
  */
 
 
-void (*get_operation(char *op_func, unsigned int line,stack_t **stack))(stack_t**, unsigned int)
+void (*go(char *op_f, unsigned int l, stack_t **stak))(stack_t**, unsigned int)
 {
 	int count;
 
@@ -32,13 +34,13 @@ void (*get_operation(char *op_func, unsigned int line,stack_t **stack))(stack_t*
 
 	for (count = 0; operation[count].opcode != NULL; count++)
 	{
-		if (strcmp(operation[count].opcode, op_func) == 0)
+		if (strcmp(operation[count].opcode, op_f) == 0)
 		{
 			return (operation[count].f);
 		}
 	}
-	fprintf(stderr, "L%u: unknown instruction %s", line, op_func);
+	fprintf(stderr, "L%u: unknown instruction %s", l, op_f);
 	fclose(file);
-	get_free(*stack);
+	get_free(*stak);
 	exit(EXIT_FAILURE);
 }

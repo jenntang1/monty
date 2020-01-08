@@ -48,7 +48,7 @@ extern FILE *file;
 FILE *file;
 
 void (*operator_function)(stack_t **, unsigned int);
-void (*get_operation(char *op_func, unsigned int line_num, stack_t **stack))(stack_t**, unsigned int);
+void (*go(char *op_f, unsigned int line_num, stack_t **stack))(stack_t**, unsigned int);
 
 
 void get_push(stack_t **stack, unsigned int line_number, char *temp);
