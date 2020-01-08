@@ -10,9 +10,9 @@ The following are the error handling in this interpreter:
 | ------------------------------------ | -------------------------------------------- | ------------- |
 | 1. No file name                      | USAGE: monty file                            | EXIT\_FAILURE |
 | 2. More than one argument            | USAGE: monty file                            | EXIT\_FAILURE |
-| 4. Cannot open file                  | Error: Can't open file *filename*            | EXIT\_FAILURE |
-| 3. File contains invalid instruction | L*line number*: unknown instruction *opcode* | EXIT\_FAILURE |
-| 4. Malloc failed                     | Error: malloc failed                         | EXIT\_FAILURE |
+| 3. Cannot open file                  | Error: Can't open file *filename*            | EXIT\_FAILURE |
+| 4. File contains invalid instruction | L*line number*: unknown instruction *opcode* | EXIT\_FAILURE |
+| 5. Malloc failed                     | Error: malloc failed                         | EXIT\_FAILURE |
 
 # General #
 0. What do LIFO and FIFO mean?  
