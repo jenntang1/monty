@@ -29,16 +29,6 @@ typedef struct stack_s
 
 
 
-typedef struct global_variables
-{
-	char *arg;
-	char * input;
-	int num;
-}global_var;
-
-extern global_var args;
-global_var args;
-
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
