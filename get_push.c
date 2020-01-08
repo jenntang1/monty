@@ -56,28 +56,29 @@ void get_push(stack_t **stack, unsigned int line_number, char *temp)
 /**
  *  _isdigit - Finds if char is a digit or not
  *
- *  @temp: Character passed in
+ *  @str: Character passed in
  *
  *  Return: 1 for digit, 0 if not
  */
 
 int _isdigit(char *str)
 {
-  
 
-	if (str == NULL || *str == '\0')
+	int i = 0;
+
+
+	if (str[i] == '-')
 	{
-		return (0);
+		i++;
 	}
-	if (*str == '-')
+	while (str[i] != '\0')
 	{
-		str++;
-	}
-	while (*str)
-	{
-		if (!isdigit(*str))
+		if (str[i] >= '0' && str[i] <= '9')
+		{
 			return (0);
-		str++;
+		}
+		i++;
 	}
-	return (1);
+
+	return (0);
 }
