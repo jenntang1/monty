@@ -17,7 +17,7 @@ void get_push(stack_t **stack, unsigned int line_number, char *temp)
 
 	(void)line_number;
 
-	if (!(_isdigit(args.arg)))
+	if (temp == NULL)
 	{
 		fprintf(stderr, "L%d: usage: push integer\n", line_number);
 		fclose(file);
