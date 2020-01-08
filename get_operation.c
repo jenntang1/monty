@@ -39,7 +39,7 @@ void (*go(char *op_f, unsigned int l, stack_t **stak))(stack_t**, unsigned int)
 			return (operation[count].f);
 		}
 	}
-	fprintf(stderr, "L%u: unknown instruction %s", l, op_f);
+	fprintf(stderr, "L%u: unknown instruction %s\n", l, op_f);
 	fclose(file);
 	get_free(*stak);
 	exit(EXIT_FAILURE);
