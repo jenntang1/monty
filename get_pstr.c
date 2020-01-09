@@ -4,8 +4,10 @@
  * get_pstr - function that prints ascii value of elements
  * @stack: pointer to head of the stack
  * @line_number: where the instruction appears
- * Description: 1. pint
- * Return: Void
+ * Description: 12. pstr
+ * Return: see below
+ * 1. upon success, nothing
+ * 2. upon fail, EXIT_FAILURE
  */
 
 void get_pstr(stack_t **stack, unsigned int line_number)
@@ -14,7 +16,7 @@ void get_pstr(stack_t **stack, unsigned int line_number)
 
 	(void)line_number;
 
-	if ((stack == NULL) || (*stack == NULL))
+	if ((*stack == NULL) || ((*stack)->next == NULL))
 	{
 		fclose(file);
 		get_free(*stack);
