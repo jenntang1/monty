@@ -29,6 +29,7 @@ void (*go(char *op_f, unsigned int l, stack_t **stak))(stack_t**, unsigned int)
 		{"rotl", get_rotl},
 		{"rotr", get_rotr},
 		{"pchar", get_pchar},
+		{"pstr", get_pstr},
 		{NULL, NULL}
 	};
 
