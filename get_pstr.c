@@ -18,7 +18,6 @@ void get_pstr(stack_t **stack, unsigned int line_number)
 
 	if ((stack == NULL) || (*stack == NULL))
 	{
-		printf("\n");
 		fclose(file);
 		get_free(*stack);
 		exit(EXIT_FAILURE);
