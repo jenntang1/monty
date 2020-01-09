@@ -14,9 +14,15 @@ void get_pstr(stack_t **stack, unsigned int line_number)
 
 	(void)line_number;
 
+	if ((stack == NULL) || (*stack == NULL))
+	{
+		fclose(file);
+		get_free(*stack);
+		exit(EXIT_FAILURE);
+	}
 	while (top_node != NULL)
 	{
-		if (top_node->n > 0 && isascii(top_node->n))
+		if ((top_node->n > 0) && (isascii(top_node->n)))
 		{
 			printf("%c", top_node->n);
 			top_node = top_node->next;
@@ -25,6 +31,6 @@ void get_pstr(stack_t **stack, unsigned int line_number)
 		{
 			break;
 		}
-		printf("\n");
 	}
+	printf("\n");
 }
