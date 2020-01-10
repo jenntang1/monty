@@ -18,21 +18,22 @@ void get_pstr(stack_t **stack, unsigned int line_number)
 
 	if ((stack == NULL) || (*stack == NULL))
 	{
-		fclose(file);
-		get_free(*stack);
-		exit(EXIT_FAILURE);
+		printf("\n");
 	}
-	while (top_node != NULL)
+	else
 	{
-		if ((top_node->n > 0) && (isascii(top_node->n)))
+		while (top_node != NULL)
 		{
-			printf("%c", top_node->n);
-			top_node = top_node->next;
+			if ((top_node->n > 0) && (isascii(top_node->n)))
+			{
+				printf("%c", top_node->n);
+				top_node = top_node->next;
+			}
+			else
+			{
+				break;
+			}
 		}
-		else
-		{
-			break;
-		}
+		printf("\n");
 	}
-	printf("\n");
 }
