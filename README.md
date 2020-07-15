@@ -54,7 +54,7 @@ gcc -Wall -Werror -Wextra -pedantic *.c -o monty
 ## Usage
 The following are instructions to use Monty.  Please consider reading the entirety of the error handling instruction.  
 
-1. Error Handling 
+1. Error Handling  
 There could be whitespaces before and/or after the opcode and its argument.  If there's text after the opcode or its argument, it will be ignored.  The file is read line by line and stopped when it's fully executed, finds an error or an error occurs.  After successful execution, output will be printed to standard out.  Otherwise, error will be printed to standard error.  
 
 The following are the error handling in this interpreter:  
@@ -67,65 +67,65 @@ The following are the error handling in this interpreter:
 | 4. File contains invalid instruction | L*line number*: unknown instruction *opcode* | EXIT\_FAILURE |
 | 5. Malloc failed                     | Error: malloc failed                         | EXIT\_FAILURE |
 
-2. Commenting
+2. Commenting  
 The .m extension files allows for commenting.  Simply add # to the beginning of a line.  Monty would ignore lines that contains # as the first non-space character.  
 
-3. push 
+3. push  
 Pushes an element onto the stack 
 ![Monty_push_pall](https://i.imgur.com/HUxT1st.png)
 
-4. pall
+4. pall  
 Prints all elements on the stack 
 ![Monty_push_pall](https://i.imgur.com/HUxT1st.png)
 
-5. pint
+5. pint  
 Prints the element at the top of the stack 
 ![Monty_pint](https://i.imgur.com/JvMgqCh.png)
 
-6. pop
+6. pop  
 Removes the element at the top of the stack 
 ![Monty_pop](https://i.imgur.com/dyUCeru.png)
 
-7. swap
+7. swap  
 Swaps the top two elements on the stack 
 ![Monty_swap](https://i.imgur.com/AF6vpLG.png)
 
-8. add
+8. add  
 Adds the top two elements on the stack  
 ![Monty_add](https://i.imgur.com/W5fWXJF.png)
 
-9. nop
+9. nop  
 Doesn't do anything
 
-10. sub
+10. sub  
 Subtracts the top two elements on the stack 
 ![Monty_sub](https://i.imgur.com/vNoLwij.png)
 
-11. div
+11. div  
 Divides the top two elements on the stack 
 ![Monty_div](https://i.imgur.com/TXg9u88.png)
 
-12. mul
+12. mul  
 Multiples the top two elements on the stack 
 ![Monty_mul](https://i.imgur.com/sktOfDd.png)
 
-13. mod
+13. mod  
 Performs the modulo operation or finds the remainder as a result of division 
 ![Monty_mod](https://i.imgur.com/pL5atc3.png)
 
-14. pchar
+14. pchar  
 Prints the integer as its corresponding ASCII value  
 ![Monty_pchar](https://i.imgur.com/mew3qjL.png)
 
-15. pstr
+15. pstr  
 Prints all the elements on the stack as a string and as its corresponding ASCII value 
 ![Monty_pstr](https://i.imgur.com/YhkIeRq.png)
 
-16. rotl
+16. rotl  
 Rotates the stack to the top 
 ![Monty_rotl](https://i.imgur.com/rWVHDyc.png)
 
-17. rotr
+17. rotr  
 Rotates the stack to the bottom 
 ![Monty_rotr](https://i.imgur.com/ohd6QSo.png)
 
