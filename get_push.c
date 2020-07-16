@@ -3,10 +3,9 @@
 /**
  * get_push - function that pushes an element onto top of the stack
  * @stack: pointer to the top of the stack
- * @line_number: where the line number appears
- * @temp: Pointer to instruction
- * Description: 0. push, pall
- * Return: see below
+ * @line_number: line number where opcode appears
+ * @temp: pointer to opcode
+ * Return:
  * 1. upon success, nothing
  * 2. upon fail, EXIT_FAILURE
  */
@@ -52,18 +51,17 @@ void get_push(stack_t **stack, unsigned int line_number, char *temp)
 
 
 /**
- *  _isdigit - Finds if char is a digit or not
- *
- *  @str: Character passed in
- *
- *  Return: 1 for digit, 0 if not
+ *  _isdigit - function that checks for digit
+ *  @str: character given
+ *  Return:
+ *  1. if digit, return 1 for digit
+ *  2. if not, return 0
  */
 
 int _isdigit(char *str)
 {
 
 	int i = 0;
-
 
 	if (str[i] == '-')
 	{

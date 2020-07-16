@@ -1,6 +1,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+/* ----------------------- Include C Libraries ------------------------- */
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,8 +10,7 @@
 #include <unistd.h>
 #include <sys/stat.h>
 
-
-
+/* ----------------------------- Structs ------------------------------- */
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -27,8 +27,6 @@ typedef struct stack_s
 	struct stack_s *next;
 } stack_t;
 
-
-
 /**
  * struct instruction_s - opcode and its function
  * @opcode: the opcode
@@ -43,14 +41,17 @@ typedef struct instruction_s
 	void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
-
+/* ---------------------- Declared Extern Variables ---------------------- */
 extern FILE *file;
 FILE *file;
 
+/* -------------------------- Helper Functions --------------------------- */
 void (*operator_function)(stack_t **, unsigned int);
 void (*go(char *op_f, unsigned int l, stack_t **s))(stack_t**, unsigned int);
+void get_free(stack_t *stack);
+int _isdigit(char *str);
 
-
+/* -------------------------- Opcode Functions --------------------------- */
 void get_push(stack_t **stack, unsigned int line_number, char *temp);
 void get_pall(stack_t **stack, unsigned int line_number);
 void get_pint(stack_t **stack, unsigned int line_number);
@@ -66,9 +67,5 @@ void get_rotl(stack_t **stack, unsigned int line_number);
 void get_pchar(stack_t **stack, unsigned int line_number);
 void get_rotr(stack_t **stack, unsigned int line_number);
 void get_pstr(stack_t **stack, unsigned int line_number);
-
-void get_free(stack_t *stack);
-int _isdigit(char *str);
-
 
 #endif /* MONTY_H */
