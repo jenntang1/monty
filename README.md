@@ -71,23 +71,23 @@ The following are the error handling in this interpreter:
 The .m extension files allows for commenting.  Simply add # to the beginning of a line.  Monty would ignore lines that contains # as the first non-space character.  
 
 3. push  
-Pushes an element onto the stack 
+Pushes an element onto the stack  
 ![Monty_push_pall](https://i.imgur.com/HUxT1st.png)
 
 4. pall  
-Prints all elements on the stack 
+Prints all elements on the stack  
 ![Monty_push_pall](https://i.imgur.com/HUxT1st.png)
 
 5. pint  
-Prints the element at the top of the stack 
+Prints the element at the top of the stack  
 ![Monty_pint](https://i.imgur.com/JvMgqCh.png)
 
 6. pop  
-Removes the element at the top of the stack 
+Removes the element at the top of the stack  
 ![Monty_pop](https://i.imgur.com/dyUCeru.png)
 
 7. swap  
-Swaps the top two elements on the stack 
+Swaps the top two elements on the stack  
 ![Monty_swap](https://i.imgur.com/AF6vpLG.png)
 
 8. add  
@@ -95,22 +95,22 @@ Adds the top two elements on the stack
 ![Monty_add](https://i.imgur.com/W5fWXJF.png)
 
 9. nop  
-Doesn't do anything
+Doesn't do anything  
 
 10. sub  
-Subtracts the top two elements on the stack 
+Subtracts the top two elements on the stack  
 ![Monty_sub](https://i.imgur.com/vNoLwij.png)
 
 11. div  
-Divides the top two elements on the stack 
+Divides the top two elements on the stack  
 ![Monty_div](https://i.imgur.com/TXg9u88.png)
 
 12. mul  
-Multiples the top two elements on the stack 
+Multiples the top two elements on the stack  
 ![Monty_mul](https://i.imgur.com/sktOfDd.png)
 
 13. mod  
-Performs the modulo operation or finds the remainder as a result of division 
+Performs the modulo operation or finds the remainder as a result of division  
 ![Monty_mod](https://i.imgur.com/pL5atc3.png)
 
 14. pchar  
@@ -118,15 +118,15 @@ Prints the integer as its corresponding ASCII value
 ![Monty_pchar](https://i.imgur.com/mew3qjL.png)
 
 15. pstr  
-Prints all the elements on the stack as a string and as its corresponding ASCII value 
+Prints all the elements on the stack as a string and as its corresponding ASCII value  
 ![Monty_pstr](https://i.imgur.com/YhkIeRq.png)
 
 16. rotl  
-Rotates the stack to the top 
+Rotates the stack to the top  
 ![Monty_rotl](https://i.imgur.com/rWVHDyc.png)
 
 17. rotr  
-Rotates the stack to the bottom 
+Rotates the stack to the bottom  
 ![Monty_rotr](https://i.imgur.com/ohd6QSo.png)
 
 ## Resources
