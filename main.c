@@ -1,15 +1,11 @@
 #include "monty.h"
 
 /**
- *  main - Main
- *
- *  @argc: Number of args
- *
- *  @argv: Command line args
- *
- *  Return: Void
+ *  main - driver function
+ *  @argc: number of args
+ *  @argv: command line args
+ *  Return: 0
  */
-
 int main(int argc, char *argv[])
 {
 	stack_t *head = NULL;
